@@ -1,4 +1,5 @@
 import type { Equal, Expect } from '@type-challenges/utils'
+import type { Includes } from './template'
 
 type cases = [
   Expect<Equal<Includes<['Kars', 'Esidisi', 'Wamuu', 'Santana'], 'Kars'>, true>>,
@@ -18,3 +19,9 @@ type cases = [
   Expect<Equal<Includes<[null], undefined>, false>>,
   Expect<Equal<Includes<[undefined], null>, false>>,
 ]
+
+type r = Includes<[boolean, 2, 3, 5, 6, 7], false>
+
+type r1 = true extends never ? true : false
+
+type r2 = false extends never ? true : false

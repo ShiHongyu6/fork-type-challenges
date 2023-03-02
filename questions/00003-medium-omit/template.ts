@@ -1,1 +1,1 @@
-type MyOmit<T, K> = any
+type MyOmit<T extends object, K extends keyof T> = Pick<T, MyExclude<keyof T, K>>

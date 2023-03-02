@@ -7,3 +7,6 @@ type cases = [
   Expect<Equal<Permutation<boolean>, [false, true] | [true, false]>>,
   Expect<Equal<Permutation<never>, []>>,
 ]
+
+
+type t = Permutation<'A'>

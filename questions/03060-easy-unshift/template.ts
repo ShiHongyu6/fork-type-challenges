@@ -1,1 +1,1 @@
-type Unshift<T, U> = any
+type Unshift<T extends readonly any[],U> = [U, ...T]
